@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  ope-backend:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - API_KEY=tu_clave_secreta
+      - DB_PATH=/data/ope.db
+      - LOG_LEVEL=info
+    volumes:
+      - ./data:/data
+    restart: unless-stoppednano README.md
+# OPE Logger - Revenue Intelligence System
+
+Sistema de optimización de conversión y reducción de devoluciones para e‑commerce mediante mensajes contextuales y evaluación off‑policy.
+
+## Instalación
+
+```bash
+npm install
+
+
